@@ -1,0 +1,43 @@
+/* --- STYLE TAMBAHAN TUGAS 3 (TOAST & DOM) --- */
+#toast-notification {
+    visibility: hidden;
+    min-width: 250px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 14px;
+    position: fixed;
+    z-index: 1000;
+    left: 50%;
+    bottom: 30px;
+    transform: translateX(-50%);
+    font-size: 14px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+#toast-notification.show {
+    visibility: visible;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@keyframes fadein {
+    from { bottom: 0; opacity: 0; }
+    to { bottom: 30px; opacity: 1; }
+}
+
+@keyframes fadeout {
+    from { bottom: 30px; opacity: 1; }
+    to { bottom: 0; opacity: 0; }
+}
+
+.dark-mode {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%) !important;
+}
+.dark-mode .hero-image {
+    background: #1e293b;
+    color: white;
+}
+.dark-mode .hero-content h1 {
+    color: #38bdf8;
+}
